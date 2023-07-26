@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Artisan Bakehouse</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+            #video-background 
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        background-size:inherit;
+        background-attachment: auto;
+    }
+    #video-background video 
+    {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: fill;
+}
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #584d4d;
+    color: whitesmoke;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-height: 100px;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh; /* Ensure the section takes the full viewport height */
+}
+
+.welcome-section h1 {
+    font-size: 90px;
+    text-shadow: 2px 2px 1px rgb(222, 247, 110),-2px -2px 1px rgb(241, 239, 108);
+    color: rgb(253, 253, 253);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold; 
+    text-align: center; 
+}
+
+
+.welcome-section p {
+    background-color: rgba(245, 245, 245, 0.5);
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0; 
+    display: flex;
+}
+
+
+nav ul li {
+    margin-left: 20px;
+    font-size: 14pt;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #9b8585;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #967b7b;
+    padding: 10px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack the child elements vertically */
+    text-align: center; /* Center-align the text */
+}
+
+footer {
+    color: black;
+    text-align: center;
+    padding: 10px;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.submenu-content {
+    display: none;
+}
+
+.submenu-content:target {
+    display: block;
+}
+    </style>
+</head>
+
+
+<body>
+    <div id="video-background">
+        <video autoplay loop muted>
+          <source src="images/2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="The Artisan Bakehouse Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Our Menu</a>
+                    <ul class="submenu">
+                        <li><a href="gluten.html">Gluten & Nut Free</a></li>
+                        <li><a href="special.html">Special Menu</a></li>
+                        <li><a href="beverages.html">Beverages</a></li>
+                    </ul>
+                </li>
+                <li><a href="company.html">Our Company</a>
+                    <ul class="submenu">
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="organisational.html">Organisational Chart</a></li>
+                        <li><a href="vision.html">Vision and Mission</a></li>
+                        <li><a href="career.html">Job Vacancy</a></li>
+                    </ul>
+                </li>
+                <li><a href="promotion.html">Our Promotion</a>
+                    <ul class="submenu">
+                        <li><a href="anniversary.html">Happy Anniversary</a></li>
+                        <li><a href="merdeka.html">Merdeka Special</a></li>
+                        <li><a href="happy.html">Happy 25th</a></li>
+                    </ul>
+                </li>
+                <li><a href="services.html">Our Services</a>
+                    <ul class="submenu">
+                        <li><a href="contact.html">Contact Details</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="welcome-section">
+                <h1>Information of Our Business</h1>
+                <p>
+                    This page serves as a central platform where we share essential details about our business.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 The Artisan Bakehouse. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
