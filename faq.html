@@ -11,18 +11,7 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 2rem;
     }
-    .container
-{
-    height: 100%;
-    width: 100%;
-    float: left;
-    margin-left:auto;
-    margin-right: auto;
-    text-align: center;
-
-}
-
-.faqs-container{
+    .faqs-container{
     font-family: 'Times New Roman', Times, serif;
     max-width: 700px;
     margin: 0 auto;
@@ -42,7 +31,7 @@
 
 .faqs-container .faq-header {
     display: flex;
-    background: red;
+    background:red;
     color:antiquewhite;
     align-items: center;
     position: relative;
@@ -97,11 +86,31 @@
 }
 
 
-
-.content.active {
-    animation: slideDown 1.5s ease forwards; 
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 rgba(255, 0, 0, 0.2); 
+    }
+    50% {
+        box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.4); 
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(255, 0, 0, 0.2); 
+    }
 }
 
+
+.content.active {
+    animation: slideDown 1.5s ease forwards, pulse 1s infinite; 
+}
+
+.content.active:hover {
+ 
+    color: blueviolet;
+    border-color: purple;
+    border-style: dotted; 
+    background-color: blanchedalmond; 
+    opacity: 10;  
+}
 
 .content:not(.active) {
     animation: slideUp 0.5s ease forwards;
